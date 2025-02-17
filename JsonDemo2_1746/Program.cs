@@ -119,7 +119,6 @@ namespace JsonDemo2_1734
                 Console.WriteLine("找不到檔案");
             }
 
-            // 等待使用者按下 Enter 鍵後結束程式
             Console.ReadLine();
         }
     }
