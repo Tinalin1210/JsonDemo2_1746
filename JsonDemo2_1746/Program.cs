@@ -126,54 +126,165 @@ namespace JsonDemo2_1734
     // GuaranteeWrapper 類別，用來封裝搜尋條件、投資人帳號群組、擔保資料、擔保資料細節
     public class GuaranteeWrapper
     {
+        /// <summary>
+        /// 搜尋條件，包含擔保品日期、投資人帳號、成交狀態、還款狀態等條件
+        /// </summary>
         public SearchCriteria SearchCriteria { get; set; }
+
+        /// <summary>
+        /// 投資人帳號群組，每個群組擁有一個擔保品序號和日期
+        /// </summary>
         public List<InvestorAccountGroup> InvestorAccountGroup { get; set; }
+
+        /// <summary>
+        /// 擔保資料清單，每個擔保資料包含投資人帳號、擔保日期、已申報金額等資訊
+        /// </summary>
         public List<GuaranteeData> GuaranteeData { get; set; }
+
+        /// <summary>
+        /// 擔保資料的詳細清單，包含擔保種類、銀行保證序號等細節
+        /// </summary>
         public List<GuaranteeDataDetail> GuaranteeDataDetail { get; set; }
     }
 
     // GuaranteeData 類別，包含每筆擔保資料的詳細資訊
     public class GuaranteeData
     {
+        /// <summary>
+        /// 投資人帳號
+        /// </summary>
         public string InvestorAccount { get; set; }
+
+        /// <summary>
+        /// 擔保日期
+        /// </summary>
         public DateTime GuaranteeDate { get; set; }
+
+        /// <summary>
+        /// 擔保序號
+        /// </summary>
         public string GuaranteeSerialNumber { get; set; }
+
+        /// <summary>
+        /// 委託日期
+        /// </summary>
         public DateTime CommissionDate { get; set; }
+
+        /// <summary>
+        /// 委託序號
+        /// </summary>
         public string CommissionSerialNumber { get; set; }
+
+        /// <summary>
+        /// 已申報擔保總金額
+        /// </summary>
         public decimal ReportedGuaranteeAmount { get; set; }
+
+        /// <summary>
+        /// 擔保維持率
+        /// </summary>
         public decimal GuaranteeMaintainRate { get; set; }
+
+        /// <summary>
+        /// 超過擔保規定比率總值
+        /// </summary>
         public decimal ExceededGuaranteeRate { get; set; }
+
+        /// <summary>
+        /// 功能碼
+        /// </summary>
         public string FunctionalCode { get; set; }
+
+        /// <summary>
+        /// 成交狀態
+        /// </summary>
         public string TransactionStatus { get; set; }
+
+        /// <summary>
+        /// 還款狀態
+        /// </summary>
         public string RepaymentStatus { get; set; }
     }
 
     // SearchCriteria 類別，包含搜尋的擔保品日期、投資人帳號、成交狀態、還款狀態等條件
     public class SearchCriteria
     {
+        /// <summary>
+        /// 擔保品日期
+        /// </summary>
         public DateTime CollateralDate { get; set; }
+
+        /// <summary>
+        /// 投資人帳號
+        /// </summary>
         public string InvestorAccount { get; set; }
+
+        /// <summary>
+        /// 成交狀態
+        /// </summary>
         public string TransactionStatus { get; set; }
+
+        /// <summary>
+        /// 還款狀態
+        /// </summary>
         public string RepaymentStatus { get; set; }
     }
 
     // InvestorAccountGroup 類別，包含投資人帳號群組的擔保品序號與日期
     public class InvestorAccountGroup
     {
+        /// <summary>
+        /// 擔保品序號
+        /// </summary>
         public string GuaranteeSerialNumber { get; set; }
+
+        /// <summary>
+        /// 擔保品序號日期
+        /// </summary>
         public DateTime GuaranteeSerialDate { get; set; }
     }
 
     // GuaranteeDataDetail 類別，包含每筆擔保資料的細節，例如擔保種類、證券來源等
     public class GuaranteeDataDetail
     {
+        /// <summary>
+        /// 擔保日期
+        /// </summary>
         public DateTime GuaranteeDate { get; set; }
+
+        /// <summary>
+        /// 擔保序號
+        /// </summary>
         public string GuaranteeSerialNumber { get; set; }
+
+        /// <summary>
+        /// 擔保種類
+        /// </summary>
         public string GuaranteeCategory { get; set; }
+
+        /// <summary>
+        /// 銀行保證序號
+        /// </summary>
         public string BankGuaranteeSerialNumber { get; set; }
+
+        /// <summary>
+        /// 券商名稱
+        /// </summary>
         public string BankSourceOfSecurities { get; set; }
+
+        /// <summary>
+        /// 券商帳號
+        /// </summary>
         public string BankSourceOfAccount { get; set; }
+
+        /// <summary>
+        /// 異動數量/金額
+        /// </summary>
         public string ChangeQuantityAmount { get; set; }
+
+        /// <summary>
+        /// 剩餘數量/金額
+        /// </summary>
         public string RemainingQuantity { get; set; }
     }
 }
