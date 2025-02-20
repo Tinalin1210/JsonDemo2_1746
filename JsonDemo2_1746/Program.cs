@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;//泛型集合類型，例如 List<T>
 using System;
 using Newtonsoft.Json;
-using System.Transactions;
-using System.Xml;
-using System.IO;
+using System.Xml;  //提供 XML 處理的功能
+using System.IO;  //提供 檔案 (File) 和資料流 (Stream) 操作 的功能，例如讀取或寫入檔案
 
 namespace JsonDemo2_1734
 {
